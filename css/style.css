@@ -1,5 +1,167 @@
+/* /* Importa a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
 
+/* Variáveis de Cores */
+:root {
+  --red: #c73a0f;
+  --green: #1ea475;
+  --rose-50: #fcf9f7;
+  --rose-100: #f4edeb;
+  --rose-300: #c9aea6;
+  --rose-400: #ad8985;
+  --rose-500: #87635a;
+  --rose-900: #260f08;
+}
 
-@media screen and (min-width:375px) {
+/* Reset e Box-Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
 
+/* Configuração do Corpo */
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5; /* Melhora a legibilidade */
+}
+
+/* Estilização de Imagens */
+picture img {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Configuração da Imagem de Comida */
+.img-food {
+  position: relative;
+}
+
+/* Estilo do Cabeçalho */
+#list-menu h1 {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+  text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo do Painel de Adição de Conteúdo */
+/* .add-panel-content {
+  overflow: hidden;
+  font-weight: 600;
+  border-radius: 50px;
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* Estilos Específicos para Adicionar ao Carrinho */
+/* .add-panel-content.add-cart {
+  border: 1px solid var(--rose-300);
+  background-color: var(--rose-50);
+} */
+
+/* Estilos Específicos para Contar no Carrinho */
+/* .add-panel-content.cont-cart {
+  border: 1px solid transparent;
+  background-color: var(--red);
+} */
+
+/* Estilo do Painel de Adição */
+/* .add-panel.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: .7em .4em;
+  width: 100%;
+  font-weight: 600;
+} */
+
+/* Estilo do Painel Oculto */
+/* .add-panel.hide {
+  display: none;
+} */
+
+/* Estilo do Painel de Quantidade */
+/* .quant-panel.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7em .4em;
+  width: 100%;
+  font-weight: 600;
+  background: var(--red);
+  color: var(--rose-100);
+} */
+
+/* Estilo das tags <p> dentro do .quant-panel.show */
+.quant-panel.show p {
+  margin: 0;
+  padding: 0 .5em; /* Adiciona espaço horizontal entre os itens */
+  font-size: 1.2em; /* Ajusta o tamanho da fonte, se necessário */
+}
+
+.signal {
+  font-size: 1.5em; /* Ajusta o tamanho dos sinais */
+  cursor: pointer; /* Adiciona um cursor de pointer para indicar que é clicável */
+  user-select: none; /* Impede a seleção do texto */
+}
+
+/* Estilo específico para .less e .plus */
+.signal.less {
+  /* Adicione estilos específicos para o sinal de menos, se necessário */
+}
+
+.signal.plus {
+  /* Adicione estilos específicos para o sinal de mais, se necessário */
+}
+
+/* Estilo do Painel de Quantidade Oculto */
+.quant-panel.hide {
+  display: none;
+}
+
+/* Estilos para Telas Menores */
+@media screen and (max-width: 768px) {
+  #container {
+    padding: 1.5em 1em;
+  }
+
+  #cards {
+    width: 100%;
+  }
+
+  .add-panel {
+    font-size: .9em;
+  }
+}
+
+/* Estilos para Telas Maiores */
+@media screen and (min-width: 768px) {
+  #container {
+    padding: 4em;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Melhora a responsividade */
+    gap: 1em;
+  }
+}
+
+/* Estilos para Telas Muito Grandes */
+@media screen and (min-width: 1200px) {
+  /* Adicione estilos específicos para telas muito grandes aqui, se necessário */
 }
